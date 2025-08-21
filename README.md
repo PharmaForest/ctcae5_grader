@@ -24,8 +24,7 @@ Grading Criteria (CTCAE v5.0 - Albumin):
     - value < 20                        -> Grade 3
 ~~~  
 ---
- 
-## `%ctcae5_alp()` macro <a name="ctcae5alp-macro-2"></a> ######
+ ## `%ctcae5_alp()` macro <a name="ctcae5alp-macro-2"></a> ######
 Parameters    :  
 ~~~text
   PARAMCD = Variable name (expected "ALP")
@@ -48,18 +47,16 @@ Grading Criteria (CTCAE v5.0 - Alkaline Phosphatase):
     - value > 20 * baseline                  -> Grade 4
 ~~~
 ---
- 
-## `%ctcae5_alt()` macro <a name="ctcae5alt-macro-3"></a> ######
-
-Program/Macro : CTCAE5_ALT
-
-Parameters    :
+ ## `%ctcae5_alt()` macro <a name="ctcae5alt-macro-3"></a> ######
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "ALT")
   AVAL    = Observed value (ALT result, in U/L)
   BASE    = Baseline value
   ANRHI   = Upper limit of normal (ULN)
-
-Grading Criteria (CTCAE v5.0 - Alanine Aminotransferase):
+~~~
+Grading Criteria (CTCAE v5.0 - Alanine Aminotransferase):  
+~~~text
   If baseline <= ULN:
     - ULN < value <= 3 * ULN            -> Grade 1
     - 3 * ULN < value <= 5 * ULN        -> Grade 2
@@ -71,39 +68,33 @@ Grading Criteria (CTCAE v5.0 - Alanine Aminotransferase):
     - 3 * baseline < value <= 5 * baseline     -> Grade 2
     - 5 * baseline < value <= 20 * baseline    -> Grade 3
     - value > 20 * baseline                   -> Grade 4
-
-  
+~~~
 ---
- 
-## `%ctcae5_aptt()` macro <a name="ctcae5aptt-macro-4"></a> ######
-
-Program/Macro : CTCAE5_APTT
-
-Parameters    :
+ ## `%ctcae5_aptt()` macro <a name="ctcae5aptt-macro-4"></a> ######
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "APTT")
   AVAL    = Observed value (APTT result, in seconds)
   ANRHI   = Upper limit of normal (ULN)
-
-Grading Criteria (CTCAE v5.0 - Activated Partial Thromboplastin Time):
+~~~
+Grading Criteria (CTCAE v5.0 - Activated Partial Thromboplastin Time):  
+~~~text
   Prolonged (Above ULN)
     - ULN < value <= 1.5 * ULN          -> Grade 1
     - 1.5 * ULN < value <= 2.5 * ULN    -> Grade 2
     - value > 2.5 * ULN                -> Grade 3
-
-  
+~~~  
 ---
- 
 ## `%ctcae5_ast()` macro <a name="ctcae5ast-macro-5"></a> ######
-
-Program/Macro : CTCAE5_AST
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "AST")
   AVAL    = Observed value (AST result, in U/L)
   BASE    = Baseline value
   ANRHI   = Upper limit of normal (ULN)
-
+~~~
 Grading Criteria (CTCAE v5.0 - Aspartate Aminotransferase):
+~~~text
   If baseline <= ULN:
     - ULN < value <= 3 * ULN            -> Grade 1
     - 3 * ULN < value <= 5 * ULN        -> Grade 2
@@ -115,21 +106,18 @@ Grading Criteria (CTCAE v5.0 - Aspartate Aminotransferase):
     - 3 * baseline < value <= 5 * baseline     -> Grade 2
     - 5 * baseline < value <= 20 * baseline    -> Grade 3
     - value > 20 * baseline                   -> Grade 4
-
-  
+~~~  
 ---
- 
-## `%ctcae5_bili()` macro <a name="ctcae5bili-macro-6"></a> ######
-
-Program/Macro : CTCAE5_BILI
-
-Parameters    :
+## `%ctcae5_bili()` macro <a name="ctcae5bili-macro-6"></a> ###### 
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "BILI")
   AVAL    = Observed value (Total Bilirubin result, in mg/dL)
   BASE    = Baseline value
   ANRHI   = Upper limit of normal (ULN)
-
-Grading Criteria (CTCAE v5.0 - Total Bilirubin):
+~~~
+Grading Criteria (CTCAE v5.0 - Total Bilirubin):  
+~~~text
   If baseline <= ULN:
     - ULN < value <= 1.5 * ULN          -> Grade 1
     - 1.5 * ULN < value <= 3 * ULN      -> Grade 2
@@ -141,24 +129,20 @@ Grading Criteria (CTCAE v5.0 - Total Bilirubin):
     - 1.5 * baseline < value <= 3 * baseline -> Grade 2
     - 3 * baseline < value <= 10 * baseline -> Grade 3
     - value > 10 * baseline                -> Grade 4
-
-  
+~~~  
 ---
- 
 ## `%ctcae5_ca()` macro <a name="ctcae5ca-macro-7"></a> ######
-
-Program/Macro : CTCAE5_CA
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "CA")
   AVAL    = Observed value (Calcium result)
   AVALU   = Unit (expected "mg/dL")
   ANRLO   = Lower limit of normal (LLN)
   ANRHI   = Upper limit of normal (ULN)
   TESTCD  = Lab test code (default "CA")
-
-Grading Criteria (CTCAE v5.0 - Calcium):
-
+~~~
+Grading Criteria (CTCAE v5.0 - Calcium):  
+~~~text
   High (Hypercalcemia):
     - ULN < value <= 11.5                -> Grade 1
     - 11.5 < value <= 12.5               -> Grade 2
@@ -170,22 +154,18 @@ Grading Criteria (CTCAE v5.0 - Calcium):
     - 7.0 <= value < 8.0                 -> Grade 2
     - 6.0 <= value < 7.0                 -> Grade 3
     - value < 6.0                       -> Grade 4
-
-  
+~~~
 ---
- 
 ## `%ctcae5_cd4()` macro <a name="ctcae5cd4-macro-8"></a> ######
-
-Program/Macro : CTCAE5_CD4
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "CD4")
   AVAL    = Observed value (CD4+ T-cell count)
   AVALU   = Unit (expected either per volume, e.g., "/mm3", "10^6/L", or "10^9/L")
   ANRLO   = Lower limit of normal (LLN)
-
-Grading Criteria (CTCAE v5.0 - CD4 Count):
-
+~~~
+Grading Criteria (CTCAE v5.0 - CD4 Count):  
+~~~text
   Units in "/mm3", "10^6/L", "/uL", "10^3/mL", "M/L":
     - value < LLN and <= 500              -> Grade 1
     - 200 <= value < 500                  -> Grade 2
@@ -197,22 +177,18 @@ Grading Criteria (CTCAE v5.0 - CD4 Count):
     - 0.2 <= value < 0.5                  -> Grade 2
     - 0.05 <= value < 0.2                 -> Grade 3
     - value < 0.05                       -> Grade 4
-
-  
----
- 
+~~~
+--- 
 ## `%ctcae5_chol()` macro <a name="ctcae5chol-macro-9"></a> ######
-
-Program/Macro : CTCAE5_CHOL
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "CHOL")
   AVAL    = Observed value (Cholesterol result)
   AVALU   = Unit (expected "mg/dL" or "mmol/L")
   ANRHI   = Upper limit of normal (ULN)
-
-Grading Criteria (CTCAE v5.0 - Cholesterol):
-
+~~~
+Grading Criteria (CTCAE v5.0 - Cholesterol):  
+~~~text
   Units in "mg/dL":
     - ULN < value <= 300                 -> Grade 1
     - 300 < value <= 400                 -> Grade 2
@@ -224,29 +200,24 @@ Grading Criteria (CTCAE v5.0 - Cholesterol):
     - 7.75 < value <= 10.34              -> Grade 2
     - 10.34 < value <= 12.92             -> Grade 3
     - value > 12.92                     -> Grade 4
-
-  
+~~~
 ---
- 
 ## `%ctcae5_ck()` macro <a name="ctcae5ck-macro-10"></a> ######
-
-Program/Macro : CTCAE5_CK
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "CK")
   AVAL    = Observed value (Creatine Kinase result, in U/L)
   ANRHI   = Upper limit of normal (ULN)
-
-Grading Criteria (CTCAE v5.0 - Creatine Kinase):
+~~~
+Grading Criteria (CTCAE v5.0 - Creatine Kinase):  
+~~~text
   High (Above ULN)
     - ULN < value <= 2.5 * ULN           -> Grade 1
     - 2.5 * ULN < value <= 5 * ULN       -> Grade 2
     - 5 * ULN < value <= 10 * ULN        -> Grade 3
     - value > 10 * ULN                  -> Grade 4
-
-  
+~~~
 ---
- 
 ## `%ctcae5_creat()` macro <a name="ctcae5creat-macro-11"></a> ######
 
 Program/Macro : CTCAE5_CREAT
