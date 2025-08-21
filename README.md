@@ -219,36 +219,32 @@ Grading Criteria (CTCAE v5.0 - Creatine Kinase):
 ~~~
 ---
 ## `%ctcae5_creat()` macro <a name="ctcae5creat-macro-11"></a> ######
-
-Program/Macro : CTCAE5_CREAT
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "CREAT")
   AVAL    = Observed value (Creatinine result, e.g., mg/dL or ・ｽ・ｽmol/L)
   ANRHI   = Upper limit of normal (ULN)
-
-Grading Criteria (CTCAE v5.0 - Creatinine):
+~~~
+Grading Criteria (CTCAE v5.0 - Creatinine):  
+~~~text
   High (Above ULN)
     - ULN < value <= 1.5 * ULN           -> Grade 1
     - 1.5 * ULN < value <= 3 * ULN       -> Grade 2
     - 3 * ULN < value <= 6 * ULN         -> Grade 3
     - value > 6 * ULN                   -> Grade 4
-
-  
+~~~
 ---
- 
 ## `%ctcae5_dlco()` macro <a name="ctcae5dlco-macro-12"></a> ######
-
-Program/Macro : CTCAE5_DLCO
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "DLCO")
   AVAL    = Observed value (DLCO result)
   AVALU   = Unit (e.g., mL/min/mmHg or % predicted)
   BASE    = Baseline value
   ANRLO   = Lower limit of normal (LLN)
-
-Grading Criteria (CTCAE v5.0 - DLCO):
+~~~
+Grading Criteria (CTCAE v5.0 - DLCO):  
+~~~text
   Compared with LLN:
     - 0 < (LLN - value) <= 3            -> Grade 1
     - 3 < (LLN - value) <= 5            -> Grade 2
@@ -260,41 +256,34 @@ Grading Criteria (CTCAE v5.0 - DLCO):
     - 3 < (Baseline - value) <= 5       -> Grade 2
     - 5 < (Baseline - value) <= 8       -> Grade 3
     - (Baseline - value) > 8           -> Grade 4
-
-  
+~~~  
 ---
- 
 ## `%ctcae5_fev1()` macro <a name="ctcae5fev1-macro-13"></a> ######
-
-Program/Macro : CTCAE5_FEV1
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "FEV1")
   AVAL    = Observed value (FEV1 result, % of predicted)
   AVALU   = Unit (expected "%")
-
-Grading Criteria (CTCAE v5.0 - FEV1):
+~~~
+Grading Criteria (CTCAE v5.0 - FEV1):  
+~~~text
   - 70% <= value <= 99%                  -> Grade 1
   - 60% <= value < 70%                  -> Grade 2
   - 50% <= value < 60%                  -> Grade 3
   - value < 50%                        -> Grade 4
-
-  
+~~~
 ---
- 
 ## `%ctcae5_fibrinog()` macro <a name="ctcae5fibrinog-macro-14"></a> ######
-
-Program/Macro : CTCAE5_FIBRINOG
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "FIBRINOG")
   AVAL    = Observed value (Fibrinogen result)
   BASE    = Baseline value
   ANRLO   = Lower limit of normal (LLN)
   AVALU   = Unit (expected "mg/dL" or "g/L")
-
-Grading Criteria (CTCAE v5.0 - Fibrinogen):
-
+~~~
+Grading Criteria (CTCAE v5.0 - Fibrinogen):  
+~~~text
   If baseline >= LLN:
     - 0.75 * LLN <= value < LLN          -> Grade 1
     - 0.50 * LLN <= value < 0.75 * LLN   -> Grade 2
@@ -309,21 +298,19 @@ Grading Criteria (CTCAE v5.0 - Fibrinogen):
 
   Absolute threshold:
     - value < 50 mg/dL (or < 0.5 g/L)   -> Grade 4
-
-  
+~~~  
 ---
  
 ## `%ctcae5_ggt()` macro <a name="ctcae5ggt-macro-15"></a> ######
-
-Program/Macro : CTCAE5_GGT
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "GGT")
   AVAL    = Observed value (GGT result, in U/L)
   BASE    = Baseline value
   ANRHI   = Upper limit of normal (ULN)
-
-Grading Criteria (CTCAE v5.0 - Gamma-Glutamyl Transferase):
+~~~
+Grading Criteria (CTCAE v5.0 - Gamma-Glutamyl Transferase):  
+~~~text
   If baseline ? ULN:
     - ULN < value <=2.5 * ULN          -> Grade 1
     - 2.5 * ULN < value ? 5 * ULN      -> Grade 2
@@ -335,22 +322,18 @@ Grading Criteria (CTCAE v5.0 - Gamma-Glutamyl Transferase):
     - 2.5 * baseline < value <= 5 * baseline   -> Grade 2
     - 5 * baseline < value <= 20 * baseline    -> Grade 3
     - value > 20 * baseline                   -> Grade 4
-
-  
+~~~
 ---
- 
 ## `%ctcae5_gluc()` macro <a name="ctcae5gluc-macro-16"></a> ######
-
-Program/Macro : CTCAE5_GLUC
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "GLUC")
   AVAL    = Observed value (Glucose result)
   AVALU   = Unit (expected "mg/dL" or "mmol/L")
   ANRLO   = Lower limit of normal (LLN)
-
-Grading Criteria (CTCAE v5.0 - Glucose, Hypoglycemia):
-
+~~~
+Grading Criteria (CTCAE v5.0 - Glucose, Hypoglycemia):  
+~~~text
   Units in "mg/dL":
     - value < LLN and ? 55              -> Grade 1
     - 40 <= value < 55                   -> Grade 2
@@ -362,56 +345,47 @@ Grading Criteria (CTCAE v5.0 - Glucose, Hypoglycemia):
     - 2.2 <= value < 3.0                 -> Grade 2
     - 1.7 <= value < 2.2                 -> Grade 3
     - value < 1.7                       -> Grade 4
-
-  
+~~~
 ---
- 
 ## `%ctcae5_haptog()` macro <a name="ctcae5haptog-macro-17"></a> ######
-
-Program/Macro : CTCAE5_HAPTOG
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "HAPTOG")
   AVAL    = Observed value (Haptoglobin result)
   ANRLO   = Lower limit of normal (LLN)
-
-Grading Criteria (CTCAE v5.0 - Haptoglobin):
+~~~
+Grading Criteria (CTCAE v5.0 - Haptoglobin):  
+~~~text
   Low (Below LLN)
     - value < LLN                      -> Grade 1
-
-  
+~~~
 ---
- 
 ## `%ctcae5_hco3()` macro <a name="ctcae5hco3-macro-18"></a> ######
-
-Program/Macro : CTCAE5_HCO3
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "HCO3")
   AVAL    = Observed value (Bicarbonate result)
   AVALU   = Unit (expected "mmol/L")
   ANRHI   = Upper limit of normal (ULN)
   ANRLO   = Lower limit of normal (LLN)
-
-Grading Criteria (CTCAE v5.0 - Bicarbonate):
+~~~
+Grading Criteria (CTCAE v5.0 - Bicarbonate):  
+~~~text
   Low (Below LLN)
     - value < LLN                      -> Grade 1
-
-  
+~~~
 ---
- 
 ## `%ctcae5_hgb()` macro <a name="ctcae5hgb-macro-19"></a> ######
-
-Program/Macro : CTCAE5_HGB
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "HGB")
   AVAL    = Observed value (Hemoglobin result)
   AVALU   = Unit (expected "g/dL")
   ANRHI   = Upper limit of normal (ULN)
   ANRLO   = Lower limit of normal (LLN)
-
-Grading Criteria (CTCAE v5.0 - Hemoglobin):
+~~~
+Grading Criteria (CTCAE v5.0 - Hemoglobin):  
+~~~text
   High (Above ULN)
     - ULN < value <= ULN+2 g/dL         ->Grade 1
     - ULN+2 < value <= ULN+4 g/dL       ->Grade 2
@@ -421,23 +395,19 @@ Grading Criteria (CTCAE v5.0 - Hemoglobin):
     - 10 g/dL <= value < LLN            ->Grade 1
     - 8 g/dL <= value < 10 g/dL         ->Grade 2
     - value < 8 g/dL                   ->Grade 3
-
-  
+~~~
 ---
- 
 ## `%ctcae5_k()` macro <a name="ctcae5k-macro-20"></a> ######
-
-Program/Macro : CTCAE5_K
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "K")
   AVAL    = Observed value (Potassium result)
   AVALU   = Unit (expected "mmol/L")
   ANRLO   = Lower limit of normal (LLN)
   ANRHI   = Upper limit of normal (ULN)
-
-Grading Criteria (CTCAE v5.0 - Potassium):
-
+~~~
+Grading Criteria (CTCAE v5.0 - Potassium):  
+~~~text
   High (Hyperkalemia):
     - ULN < value <= 5.5                 -> Grade 1
     - 5.5 < value <= 6.0                 -> Grade 2
@@ -448,38 +418,31 @@ Grading Criteria (CTCAE v5.0 - Potassium):
     - value < LLN and <= 3.0             -> Grade 2
     - 2.5 <= value < 3.0                 -> Grade 3
     - value < 2.5                       -> Grade 4
-
-  
+~~~  
 ---
- 
 ## `%ctcae5_ldh()` macro <a name="ctcae5ldh-macro-21"></a> ######
-
-Program/Macro : CTCAE5_LDH
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "LDH")
   AVAL    = Observed value (LDH result, in U/L)
   ANRHI   = Upper limit of normal (ULN)
-
-Grading Criteria (CTCAE v5.0 - Lactate Dehydrogenase):
+~~~
+Grading Criteria (CTCAE v5.0 - Lactate Dehydrogenase):  
+~~~text
   High (Above ULN)
     - value > ULN                      -> Grade 1
-
-  
+~~~  
 ---
- 
 ## `%ctcae5_lvef()` macro <a name="ctcae5lvef-macro-22"></a> ######
-
-Program/Macro : CTCAE5_LVEF
-
 Parameters    :
+~~~text
   PARAMCD = Variable name (expected "LVEF")
   AVAL    = Observed value (Left Ventricular Ejection Fraction, in %)
   AVALU   = Unit (expected "%")
   BASE    = Baseline value (in %)
-
-Grading Criteria (CTCAE v5.0 - LVEF):
-
+~~~
+Grading Criteria (CTCAE v5.0 - LVEF):  
+~~~text
   Absolute value:
     - 40% <= value < 50%                 -> Grade 2
     - 20% <= value < 40%                 -> Grade 3
@@ -488,22 +451,18 @@ Grading Criteria (CTCAE v5.0 - LVEF):
   Drop from baseline:
     - 10% <= decrease < 20%              -> Grade 2
     - decrease >= 20%                    -> Grade 3
-
-  
+~~~  
 ---
- 
 ## `%ctcae5_lym()` macro <a name="ctcae5lym-macro-23"></a> ######
-
-Program/Macro : CTCAE5_LYM
-
 Parameters    :
+~~~text
   PARAMCD = Variable name (expected "LYM")
   AVAL    = Observed value (Lymphocyte count)
   AVALU   = Unit (expected either per volume, e.g., "/mm3", "/uL" or "10^9/L")
   ANRLO   = Lower limit of normal (LLN)
-
+~~~
 Grading Criteria (CTCAE v5.0 - Lymphocytes):
-
+~~~text
   High (Above ULN):
     Units in "/mm3", "/uL":
       - 4000 < value <= 20000            -> Grade 2
@@ -525,23 +484,19 @@ Grading Criteria (CTCAE v5.0 - Lymphocytes):
       - 0.5 <= value < 0.8               -> Grade 2
       - 0.2 <= value < 0.5               -> Grade 3
       - value < 0.2                     -> Grade 4
-
-  
+~~~
 ---
- 
 ## `%ctcae5_mg()` macro <a name="ctcae5mg-macro-24"></a> ######
-
-Program/Macro : CTCAE5_MG
-
 Parameters    :
+~~~text
   PARAMCD = Variable name (expected "MG")
   AVAL    = Observed value (Magnesium result)
   AVALU   = Unit (expected "mg/dL")
   ANRLO   = Lower limit of normal (LLN)
   ANRHI   = Upper limit of normal (ULN)
-
-Grading Criteria (CTCAE v5.0 - Magnesium):
-
+~~~
+Grading Criteria (CTCAE v5.0 - Magnesium):  
+~~~text
   High (Hypermagnesemia):
     - ULN < value <= 3.0                 -> Grade 1
     - 3.0 < value <= 8.0                 -> Grade 3
@@ -552,23 +507,19 @@ Grading Criteria (CTCAE v5.0 - Magnesium):
     - 0.9 <= value < 1.2                 -> Grade 2
     - 0.7 <= value < 0.9                 -> Grade 3
     - value < 0.7                       -> Grade 4
-
-  
+~~~
 ---
- 
 ## `%ctcae5_na()` macro <a name="ctcae5na-macro-25"></a> ######
-
-Program/Macro : CTCAE5_NA
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "NA")
   AVAL    = Observed value (Sodium result)
   AVALU   = Unit (expected "mmol/L")
   ANRLO   = Lower limit of normal (LLN)
   ANRHI   = Upper limit of normal (ULN)
-
+~~~
 Grading Criteria (CTCAE v5.0 - Sodium):
-
+~~~text
   High (Hypernatremia):
     - ULN < value <= 150                 -> Grade 1
     - 150 < value <= 155                 -> Grade 2
@@ -580,22 +531,18 @@ Grading Criteria (CTCAE v5.0 - Sodium):
     - 125 <= value <= 129                 -> Grade 2
     - 120 <= value <= 124                 -> Grade 3
     - value < 120                       -> Grade 4
-
-  
+~~~  
 ---
- 
 ## `%ctcae5_neut()` macro <a name="ctcae5neut-macro-26"></a> ######
-
-Program/Macro : CTCAE5_NEUT
-
 Parameters    :
+~~~text
   PARAMCD = Variable name (expected "NEUT")
   AVAL    = Observed value (Neutrophil count)
   AVALU   = Unit (expected either per volume, e.g., "/mm3", "/uL" or "10^9/L")
   ANRLO   = Lower limit of normal (LLN)
-
-Grading Criteria (CTCAE v5.0 - Neutrophils):
-
+~~~
+Grading Criteria (CTCAE v5.0 - Neutrophils):  
+~~~text
   Units in "/mm3", "/uL":
     - value < LLN and <= 1500            -> Grade 1
     - 1000 <= value < 1500               -> Grade 2
@@ -607,22 +554,18 @@ Grading Criteria (CTCAE v5.0 - Neutrophils):
     - 1.0 <= value < 1.5                 -> Grade 2
     - 0.5 <= value < 1.0                 -> Grade 3
     - value < 0.5                       -> Grade 4
-
-  
+~~~  
 ---
- 
 ## `%ctcae5_plat()` macro <a name="ctcae5plat-macro-27"></a> ######
-
-Program/Macro : CTCAE5_PLAT
-
 Parameters    :
+~~~
   PARAMCD = Variable name (expected "PLAT")
   AVAL    = Observed value (Platelet count)
   AVALU   = Unit (expected either per volume, e.g., "/mm3", "/uL" or "10^9/L")
   ANRLO   = Lower limit of normal (LLN)
-
-Grading Criteria (CTCAE v5.0 - Platelets):
-
+~~~
+Grading Criteria (CTCAE v5.0 - Platelets):  
+~~~text
   Units in "/mm3", "/uL":
     - value < LLN and >= 75,000          -> Grade 1
     - 50,000 <= value < 75,000           -> Grade 2
@@ -634,22 +577,18 @@ Grading Criteria (CTCAE v5.0 - Platelets):
     - 50 <= value < 75                   -> Grade 2
     - 25 <= value < 50                   -> Grade 3
     - value < 25                        -> Grade 4
-
-  
+~~~
 ---
- 
 ## `%ctcae5_qtcf()` macro <a name="ctcae5qtcf-macro-28"></a> ######
-
-Program/Macro : CTCAE5_QTCF
-
 Parameters    :
+~~~text
   PARAMCD = Variable name (expected "QTCF")
   AVAL    = Observed value (QTcF interval, in milliseconds)
   AVALU   = Unit (expected "ms")
   BASE    = Baseline value (in ms)
-
+~~~
 Grading Criteria (CTCAE v5.0 - QTcF Interval):
-
+~~~text
   Absolute value:
     - 450 ms <= value <= 480 ms           -> Grade 1
     - 480 ms < value <= 500 ms           -> Grade 2
@@ -658,42 +597,35 @@ Grading Criteria (CTCAE v5.0 - QTcF Interval):
   Change from baseline:
     - 30 ms <= increase < 60 ms          -> Grade 1
     - increase >= 60 ms                  -> Grade 2
-
-  
+~~~
 ---
- 
 ## `%ctcae5_tni()` macro <a name="ctcae5tni-macro-29"></a> ######
-
-Program/Macro : CTCAE5_TNI
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "TNI")
   AVAL    = Observed value (Troponin I result, e.g., ng/mL)
   ANRHI   = Upper limit of normal (ULN)
   MFRHI   = Medical decision limit (e.g., myocardial infarction reference high)
-
-Grading Criteria (CTCAE v5.0 - Troponin I):
+~~~
+Grading Criteria (CTCAE v5.0 - Troponin I):  
+~~~text
   If MFRHI is not provided:
     - value > ULN                      -> Grade 1
 
   If MFRHI is provided:
     - ULN < value < MFRHI              -> Grade 1
     - value <= MFRHI                    -> Grade 3
-
-  
+~~~
 ---
- 
 ## `%ctcae5_trig()` macro <a name="ctcae5trig-macro-30"></a> ######
-
-Program/Macro : CTCAE5_TRIG
-
 Parameters    :
+~~~text
   PARAMCD = Variable name (expected "TRIG")
   AVAL    = Observed value (Triglycerides result)
   AVALU   = Unit (expected "mg/dL" or "mmol/L")
-
-Grading Criteria (CTCAE v5.0 - Triglycerides):
-
+~~~
+Grading Criteria (CTCAE v5.0 - Triglycerides):  
+~~~text
   Units in "mg/dL":
     - 150 <= value <= 300                 -> Grade 1
     - 300 < value <= 500                 -> Grade 2
@@ -705,43 +637,36 @@ Grading Criteria (CTCAE v5.0 - Triglycerides):
     - 3.42 <= value <= 5.7                -> Grade 2
     - 5.7 < value <= 11.4                -> Grade 3
     - value > 11.4                      -> Grade 4
-
-  
+~~~  
 ---
- 
 ## `%ctcae5_tropnt()` macro <a name="ctcae5tropnt-macro-31"></a> ######
-
-Program/Macro : CTCAE5_TROPNT
-
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "TROPNT")
   AVAL    = Observed value (Troponin T result, e.g., ng/mL)
   ANRHI   = Upper limit of normal (ULN)
   MFRHI   = Medical decision limit (e.g., myocardial infarction reference high)
-
+~~~
 Grading Criteria (CTCAE v5.0 - Troponin T):
+~~~text
   If MFRHI is not provided:
     - value > ULN                      -> Grade 1
 
   If MFRHI is provided:
     - ULN < value < MFRHI              -> Grade 1
     - value <= MFRHI                    -> Grade 3
-
-  
+~~~  
 ---
- 
 ## `%ctcae5_wbc()` macro <a name="ctcae5wbc-macro-32"></a> ######
-
-Program/Macro : CTCAE5_WBC
-
 Parameters    :
+~~~text
   PARAMCD = Variable name (expected "WBC")
   AVAL    = Observed value (White Blood Cell count)
   AVALU   = Unit (expected either per volume, e.g., "/mm3", "/uL" or "10^9/L")
   ANRLO   = Lower limit of normal (LLN)
-
+~~~
 Grading Criteria (CTCAE v5.0 - White Blood Cells):
-
+~~~text
   High (Leukocytosis):
     Units in "/mm3", "/uL":
       - value > 100,000                 -> Grade 3
@@ -761,3 +686,4 @@ Grading Criteria (CTCAE v5.0 - White Blood Cells):
       - 2.0 <= value < 3.0               -> Grade 2
       - 1.0 <= value < 2.0               -> Grade 3
       - value < 1.0                     -> Grade 4
+~~~
