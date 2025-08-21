@@ -29,9 +29,6 @@ Grading Criteria (CTCAE v5.0 - Albumin):
 ---
  
 ## `%ctcae5_alp()` macro <a name="ctcae5alp-macro-2"></a> ######
-
-Program/Macro : CTCAE5_ALP  
-
 Parameters    :  
 ~~~text
   PARAMCD = Variable name (expected "ALP")
