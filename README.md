@@ -4,17 +4,15 @@ ctcae5_grader is a SAS macro package that automates the grading of laboratory te
 <img width="300" height="300" alt="Image" src="https://github.com/user-attachments/assets/078be8bd-3ff3-4359-b30e-1f8f53921685" />  
 
 ## `%ctcae5_alb()` macro <a name="ctcae5alb-macro-1"></a> ######
-
-Program/Macro : CTCAE5_ALB
-
 Parameters    :
+~~~text
   PARAMCD = Variable name (expected "ALB")
   AVAL    = Observed value (Albumin result)
   AVALU   = Unit (expected "g/dL" or "g/L")
   ANRLO   = Lower limit of normal (LLN)
-
-Grading Criteria (CTCAE v5.0 - Albumin):
-
+~~~
+Grading Criteria (CTCAE v5.0 - Albumin):  
+~~~text
   Units in "g/dL":
     - value < LLN and >= 3.0             -> Grade 1
     - 2.0 <= value < 3.0                 -> Grade 2
@@ -24,8 +22,7 @@ Grading Criteria (CTCAE v5.0 - Albumin):
     - value < LLN and >= 30              -> Grade 1
     - 20 <= value < 30                   -> Grade 2
     - value < 20                        -> Grade 3
-
-  
+~~~  
 ---
  
 ## `%ctcae5_alp()` macro <a name="ctcae5alp-macro-2"></a> ######
