@@ -30,15 +30,17 @@ Grading Criteria (CTCAE v5.0 - Albumin):
  
 ## `%ctcae5_alp()` macro <a name="ctcae5alp-macro-2"></a> ######
 
-Program/Macro : CTCAE5_ALP
+Program/Macro : CTCAE5_ALP  
 
-Parameters    :
+Parameters    :  
+~~~text
   PARAMCD = Variable name (expected "ALP")
   AVAL    = Observed value (ALP result, in U/L)
   BASE    = Baseline value
   ANRHI   = Upper limit of normal (ULN)
-
-Grading Criteria (CTCAE v5.0 - Alkaline Phosphatase):
+~~~
+Grading Criteria (CTCAE v5.0 - Alkaline Phosphatase):  
+~~~
   If baseline <= ULN:
     - ULN < value <= 2.5 * ULN          -> Grade 1
     - 2.5 * ULN < value <= 5 * ULN      -> Grade 2
@@ -50,8 +52,7 @@ Grading Criteria (CTCAE v5.0 - Alkaline Phosphatase):
     - 2.5 * baseline < value <= 5 * baseline  -> Grade 2
     - 5 * baseline < value <= 20 * baseline   -> Grade 3
     - value > 20 * baseline                  -> Grade 4
-
-  
+~~~
 ---
  
 ## `%ctcae5_alt()` macro <a name="ctcae5alt-macro-3"></a> ######
