@@ -1,7 +1,32 @@
 # ctcae5_grader
 ctcae5_grader is a SAS macro package that automates the grading of laboratory tests according to CTCAE v5.0. It standardises grading rules for common laboratory parameters (e.g. haematology, biochemistry, electrolytes) and provides character and numeric grade outputs. DESCRIPTION END:
 
-<img width="300" height="300" alt="Image" src="https://github.com/user-attachments/assets/078be8bd-3ff3-4359-b30e-1f8f53921685" />  
+<img width="300" height="300" alt="Image" src="https://github.com/user-attachments/assets/078be8bd-3ff3-4359-b30e-1f8f53921685" /> 
+~~~sas
+data lab_testcases;
+  length PARAMCD $12 AVALU $16;
+  infile datalines dsd truncover;
+  input PARAMCD :$12. AVAL AVALU :$16. ANRLO ANRHI BASE MFRHI;
+  datalines;
+HGB,  14.5,g/dL,  12, 13.5, .,   .
+HGB,  15.4,g/dL,  12, 14.0, .,   .
+HGB,  17.0,g/dL,  12, 12.5, .,   .
+HGB,   7.5,g/dL,  12, 13.5, .,   .
+ALT,   70,  U/L,   .,  40,   30,  .
+ALT,  900,  U/L,   .,  40,   60,  . 
+NEUT,  0.8, 10^9/L, 1.5, .,  .,   .
+NEUT,  0.45,10^9/L, 1.5, .,  .,   .
+;
+run;
+
+data lab_checked;
+  set lab_testcases;
+  %CTCAE5_HGB()
+  %CTCAE5_ALT()
+  %CTCAE5_NEUT()
+run;
+~~~
+<img width="1432" height="270" alt="Image" src="https://github.com/user-attachments/assets/b299932a-34af-4cb4-ac41-f23865f5d896" />
 
 ## `%ctcae5_alb()` macro <a name="ctcae5alb-macro-1"></a> ######
 Parameters    :
