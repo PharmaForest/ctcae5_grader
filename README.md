@@ -27,7 +27,7 @@ data lab_checked;
   %CTCAE5_NEUT()
 run;
 ~~~
-<img width="1432" height="270" alt="Image" src="https://github.com/user-attachments/assets/b299932a-34af-4cb4-ac41-f23865f5d896" />
+<img width="1886" height="355" alt="Image" src="https://github.com/user-attachments/assets/6ec8ef37-da42-43c7-ba39-adec71379a5e" />
 
 ## `%ctcae5_alb()` macro <a name="ctcae5alb-macro-1"></a> ######
 Parameters    :
